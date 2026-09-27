@@ -270,7 +270,7 @@ This separation also makes the system easier to test and reduces unnecessary dep
 A modular monolith was selected for the MVP.
 
 The basic architecture is:
-
+```text
 React Frontend
         |
         | REST API
@@ -287,7 +287,7 @@ Spring Boot Backend
                     v               v
              Deterministic      LLM Evaluator
                 Evaluator            Seam
-
+```
 A modular monolith is appropriate because the product is small and the main engineering challenge is domain design rather than distributed systems.
 
 Introducing microservices, Kafka, Kubernetes, or distributed queues would add infrastructure complexity without improving the core learning experience for this MVP.
@@ -317,13 +317,13 @@ The conceptual submission model can support:
 The evaluator is also represented by an interface so that different evaluation strategies can be introduced later.
 
 Conceptually:
-
+```text
 Evaluator
     |
     +-- DeterministicEvaluator
     |
     +-- LlmEvaluator
-
+```
 This reduces coupling between the core practice flow and the evaluation implementation.
 
 ## 13. MVP Scope
