@@ -151,7 +151,7 @@ Spring Boot Backend
                  |
                  v
              PostgreSQL
-```text
+```
 ## Backend Structure
 
 backend/src/main/java/com/lldpractice
@@ -162,7 +162,7 @@ backend/src/main/java/com/lldpractice
 ├── evaluation
 ├── problem
 └── submission
-```text
+```
 ### Problem
 
 Responsible for storing and retrieving LLD problems.
@@ -183,7 +183,7 @@ EVALUATING
      |
      v
 COMPLETED
-```text
+```
 ### Submission
 
 Stores the learner's design explanation.
@@ -227,7 +227,7 @@ Feedback Screen
      |
      v
 Attempt History
-```text
+```
 ## Technology Stack
 
 ### Frontend
@@ -419,7 +419,7 @@ Evaluator
    +-- DeterministicEvaluator
    |
    +-- LlmEvaluator
-```text
+```
 A future evaluator can be introduced without changing the core attempt and submission domain.
 
 ## Future Improvements
