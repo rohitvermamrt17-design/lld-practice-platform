@@ -1,5 +1,60 @@
 # LLD Coach — Practice, Submit, Understand, Improve
 
+## 🎯 Project Overview
+
+LLD Coach is a focused Low-Level Design practice platform that helps learners:
+
+1. Choose an LLD problem
+2. Understand the requirements
+3. Submit a design explanation
+4. Receive structured feedback
+5. Review previous attempts
+6. Improve and retry
+
+The MVP focuses on the core learning loop rather than complex infrastructure.
+
+## ✨ Current Features
+
+- 3 LLD practice problems
+- Practice attempt lifecycle
+- Structured text-based submissions
+- Deterministic evaluation
+- Criterion-based feedback
+- Attempt history
+- PostgreSQL persistence
+- React frontend
+- Spring Boot REST API
+- Automated backend tests
+
+## 🧩 Problems Included
+
+| Problem | Difficulty |
+|---|---|
+| Parking Lot | Easy |
+| Elevator System | Medium |
+| Vending Machine | Medium |
+
+## 🏗️ Architecture
+
+React Frontend  
+↓  
+Spring Boot REST API  
+↓  
+Domain Services  
+↓  
+PostgreSQL
+
+Evaluation:
+
+Submission  
+↓  
+Evaluation Engine  
+↓  
+Deterministic Evaluator  
+↓  
+Structured Feedback
+
+The evaluator abstraction allows an LLM-based evaluator to be introduced later without changing the core practice flow.
 LLD Coach is a practice platform for learning and improving Low-Level Design (LLD).
 
 The platform allows a learner to:
