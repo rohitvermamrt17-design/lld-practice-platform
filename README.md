@@ -125,7 +125,7 @@ Focus areas:
 - Transaction cancellation
 
 ## Architecture
-
+```text
 React Frontend
         |
         | REST API
@@ -151,18 +151,18 @@ Spring Boot Backend
                  |
                  v
              PostgreSQL
-
+```text
 ## Backend Structure
 
 backend/src/main/java/com/lldpractice
-
+```text
 ├── api
 ├── attempt
 ├── evaluator
 ├── evaluation
 ├── problem
 └── submission
-
+```text
 ### Problem
 
 Responsible for storing and retrieving LLD problems.
@@ -170,7 +170,7 @@ Responsible for storing and retrieving LLD problems.
 ### Attempt
 
 Responsible for the learner's practice lifecycle.
-
+```text
 IN_PROGRESS
      |
      v
@@ -183,7 +183,7 @@ EVALUATING
      |
      v
 COMPLETED
-
+```text
 ### Submission
 
 Stores the learner's design explanation.
@@ -211,7 +211,7 @@ This keeps the evaluation mechanism replaceable.
 ## Frontend
 
 The frontend is built using React and Vite.
-
+```text
 Main screens:
 
 Problem List
@@ -227,7 +227,7 @@ Feedback Screen
      |
      v
 Attempt History
-
+```text
 ## Technology Stack
 
 ### Frontend
@@ -413,13 +413,13 @@ Text provides a meaningful MVP while leaving diagram submissions as a future ext
 The evaluator interface makes the evaluation mechanism replaceable.
 
 For example:
-
+```text
 Evaluator
    |
    +-- DeterministicEvaluator
    |
    +-- LlmEvaluator
-
+```text
 A future evaluator can be introduced without changing the core attempt and submission domain.
 
 ## Future Improvements
